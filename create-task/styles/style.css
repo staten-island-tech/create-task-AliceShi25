@@ -3,6 +3,47 @@
     font: 62.5%;
     margin: 0;
     padding: 0;
+    background-color: lavenderblush;
+}
+
+#parent{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
     background-color: lavenderblush
 }
+
+.imageCards{
+    width: 300px;
+    margin: 1rem;
+    border-radius: 3px;
+    position:relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    transition: transform 0.3s ease 0.3s;
+}
+
+.imageCards:hover {
+    transform: scale(1.02);
+  }
+
+.imageInfo {
+    position:absolute;
+    background-color: lavenderblush;
+    left:0;
+    right:0;
+    bottom:0;
+    padding: 1rem;
+    max-height: 100%;
+    transform:translateY(101%);
+    transition: transform 0.4s ease-in;
+}
+
+.imageCards:hover .imageInfo{
+    transform:translateY(0)
+}
+
+
 
