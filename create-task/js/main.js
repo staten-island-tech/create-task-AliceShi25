@@ -3,20 +3,19 @@ import { array } from "./array";
 
 const DOMSelectors = {
   parent: document.getElementById("parent"),
-  search: document.getElementById("searchBar"),
 };
 
 const catInfo = {
-  addInfo: function (card) {
+  addInfo: function (cat) {
     DOMSelectors.parent.insertAdjacentHTML(
       "beforeend",
       `<div class="imageCards">
-              <img class="image" src="${card.image}">
-              <h2>${card.name}</h2>
+              <img class="image" src="${cat.image}">
+              <h2>${cat.name}</h2>
               <div class="imageInfo">
-              <h3>lifespan:${card.lifespan} </h3>
-              <h4> weight:${card.weight}</h4>
-              <h5>Fun Fact: ${card.funFact}</h5>
+              <h3>lifespan:${cat.lifespan} </h3>
+              <h4> weight:${cat.weight}</h4>
+              <h5>Fun Fact: ${cat.funFact}</h5>
               </div>
               </div>`
     );
