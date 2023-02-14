@@ -3,6 +3,9 @@ import { array } from "./array";
 
 const DOMSelectors = {
   parent: document.getElementById("parent"),
+  tab1: document.getElementById("tab1"),
+  tab2: document.getElementById("tab2"),
+  clear: document.getElementById("tab2"),
 };
 
 const catInfo = {
@@ -20,5 +23,39 @@ const catInfo = {
               </div>`
     );
   },
+  calcInfo: function () {
+    DOMSelectors.parent.insertAdjacentHTML(
+      "beforeend",
+      `<div class="CompBox">
+      <h2>What's your cat compatability?</h2>
+      <form id="form">
+          <div class="forms-info">
+              <label for="Name">Your Name</label>
+              <input type="text" id="Name" required />
+          </div>
+          <div class="forms-info">
+              <label for="cName">Cat Name</label>
+              <input type="text" id="cName" required />
+          </div>
+          <div class="forms-info">
+              <input type="submit" id="button" value="Calculate Compatability">
+          </div>
+      </form>
+  </div>`
+    );
+  },
 };
 array.forEach(catInfo.addInfo);
+
+const remove = {
+  remove: function () {
+    document.querySelectorAll(".imageCards").forEach((card) => card.remove());
+  },
+};
+
+DOMSelectors.tab1.addEventListener("click", function () {
+  remove.remove();
+  catInfo.calcInfo();
+});
+
+DOMSelectors.tab2.addEventListener("click", function () {});
