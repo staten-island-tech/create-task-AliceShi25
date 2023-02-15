@@ -28,7 +28,7 @@
     transition: transform 0.3s ease 0.3s;
 }
 
-.CompBox{
+#CompBox{
     background-color: #f1c1ff;
     padding: 10px;
     border-radius: 2rem;

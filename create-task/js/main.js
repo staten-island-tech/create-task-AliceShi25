@@ -26,8 +26,8 @@ const catInfo = {
   calcInfo: function () {
     DOMSelectors.parent.insertAdjacentHTML(
       "beforeend",
-      `<div class="CompBox">
-      <h2>What's your cat compatability?</h2>
+      `<div id="CompBox">
+      <h2>What's your cat compatibility?</h2>
       <form id="form">
           <div class="forms-info">
               <label for="Name">Your Name</label>
@@ -58,4 +58,7 @@ DOMSelectors.tab1.addEventListener("click", function () {
   catInfo.calcInfo();
 });
 
-DOMSelectors.tab2.addEventListener("click", function () {});
+function thisRemove() {
+  const el = document.getElementById("CompBox");
+  el.remove();
+}
