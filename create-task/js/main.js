@@ -1,11 +1,13 @@
 import "../styles/style.css";
-import { array } from "./array";
+import { kitty } from "./array";
 
 const DOMSelectors = {
   parent: document.getElementById("parent"),
   tab1: document.getElementById("tab1"),
   tab2: document.getElementById("tab2"),
-  clear: document.getElementById("tab2"),
+  name: document.getElementById("Name"),
+  cName: document.getElementById("cName"),
+  CB: document.getElementById("compBox"),
 };
 
 const catInfo = {
@@ -25,7 +27,7 @@ const catInfo = {
   },
   calcInfo: function () {
     DOMSelectors.parent.insertAdjacentHTML(
-      "beforeend",
+      "afterend",
       `<div id="CompBox">
       <h2>What's your cat compatibility?</h2>
       <form id="form">
@@ -38,27 +40,40 @@ const catInfo = {
               <input type="text" id="cName" required />
           </div>
           <div class="forms-info">
-              <input type="submit" id="button" value="Calculate Compatability">
+              <button>Calculate Compatibility</button>
           </div>
       </form>
   </div>`
     );
   },
 };
-array.forEach(catInfo.addInfo);
+kitty.forEach(catInfo.addInfo);
 
 const remove = {
   remove: function () {
     document.querySelectorAll(".imageCards").forEach((card) => card.remove());
   },
+  none: function () {
+    DOMSelectors.name.value = "";
+    DOMSelectors.cName.value = "";
+  },
 };
+
+function clear() {
+  let clear = DOMSelectors.tab2;
+  clear.forEach((node) => {
+    node.addEventListener("click", function (addCard) {
+      addCard.target.parentElement.remove();
+    });
+  });
+}
 
 DOMSelectors.tab1.addEventListener("click", function () {
   remove.remove();
   catInfo.calcInfo();
 });
 
-function thisRemove() {
-  const el = document.getElementById("CompBox");
-  el.remove();
-}
+DOMSelectors.CB.addEventListener("submit", function (addCard) {
+  addCard.preventDefault();
+  clear();
+});

@@ -1,4 +1,4 @@
-const array = [
+const kitty = [
   {
     name: "Abyssinian",
     weight: "6-10 pounds",
@@ -396,4 +396,4 @@ const array = [
   },
 ];
 
-export { array };
+export { kitty };
