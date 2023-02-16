@@ -387,7 +387,7 @@ const kitty = [
     funFact: "",
   },
   {
-    name: "Turksih Van",
+    name: "Turkish Van",
     weight: "pounds",
     lifespan: "years",
     image:
@@ -396,4 +396,18 @@ const kitty = [
   },
 ];
 
+const DOMSelectors = {
+  parent: document.getElementById("parent"),
+  tab1: document.getElementById("tab1"),
+  tab2: document.getElementById("tab2"),
+  name: document.getElementById("Name"),
+  cName: document.getElementById("cName"),
+  form: document.getElementById("form"),
+  calcB: document.getElementById("calculate"),
+  CB: document.getElementById("CompBox"),
+  RB: document.getElementById("resultBox"),
+};
+
 export { kitty };
+
+export { DOMSelectors };
