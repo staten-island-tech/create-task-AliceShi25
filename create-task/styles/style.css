@@ -9,7 +9,7 @@
     background-color: lavenderblush;
 }
 
-#parent{
+#parent,#calc{
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -28,7 +28,12 @@
     transition: transform 0.3s ease 0.3s;
 }
 
-#CompBox,#resultBox{
+#CompBox{
+    background-color: #f1c1ff;
+    font-size: 2rem;
+}
+
+#resultBox{
     background-color: #f1c1ff;
     padding: 10px;
     border-radius: 2rem;
@@ -36,6 +41,13 @@
     font-size: 2.5rem;
     margin: 0.25px auto;
     position: relative;
+}
+
+.forms-info{
+    color: black;
+    font-size: 2rem;
+    flex-direction: column;
+    font-size: 2.5rem;
 }
 
 .imageCards:hover {
