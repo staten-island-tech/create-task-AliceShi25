@@ -406,6 +406,7 @@ const DOMSelectors = {
   calcB: document.getElementById("calculate"),
   CB: document.getElementById("CompBox"),
   RB: document.getElementById("resultBox"),
+  byeimage: document.getElementById("byeimage"),
 };
 
 export { kitty };

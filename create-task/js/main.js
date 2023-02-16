@@ -16,34 +16,16 @@ const catInfo = {
               </div>`
     );
   },
-  calcInfo: function () {
-    DOMSelectors.parent.insertAdjacentHTML(
-      "beforeend",
-      `<div id="CompBox">
-      <h2>What's your cat compatibility?</h2>
-
-      <form id="form">
-          <div class="forms-info">
-              <label for="Name">Your Name</label>
-              <input type="text" id="Name" required />
-          </div>
-          <div class="forms-info">
-              <label for="cName">Cat Name</label>
-              <input type="text" id="cName" required />
-          </div>
-          <div class="forms-info">
-              <button id="calculate">Calculate Compatibility</button>
-          </div>
-      </form>
-  </div>
-  <div id=resultBox>
-  </div>`
-    );
-  },
 };
 kitty.forEach(catInfo.addInfo);
 
-DOMSelectors.tab1.addEventListener("click", function () {
-  remove.remove();
-  catInfo.calcInfo();
-});
+// const remove = {
+//   remove: function () {
+//     document.querySelectorAll(".imageCards").forEach((card) => card.remove());
+//   },
+// };
+
+// DOMSelectors.tab1.addEventListener("click", function () {
+//   remove.remove();
+//   catInfo.calcInfo();
+// });
