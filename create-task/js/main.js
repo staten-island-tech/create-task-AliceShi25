@@ -1,5 +1,5 @@
 import "../styles/style.css";
-import { DOMSelectors, kitty } from "./array";
+import { DOMSelectors, kitty, cats } from "./array";
 
 const catInfo = {
   addInfo: function (cat) {
@@ -18,15 +18,22 @@ const catInfo = {
   },
 };
 kitty.forEach(catInfo.addInfo);
+cats.sort();
+cats.forEach(function (item) {
+  let o = document.createElement("option");
+  o.text = item;
+  o.value = item;
+  cName.appendChild(o);
+});
 
 function create() {
   let card = {};
   card.name = DOMSelectors.name.value;
-  card.cName = DOMSelectors.cName.value;
+  card.cName = DOMSelectors.option.value;
   card.percentage = Math.floor(Math.random() * (100 - 1)) + 1;
   DOMSelectors.calcB.insertAdjacentHTML(
     `afterend`,
-    `<div class="resultBox">
+    `<div id="resultBox">
       <h2>${card.name} and ${card.cName} are ${card.percentage}% compatible</h2>
        <button class="clear">Clear</button>
   </div>`

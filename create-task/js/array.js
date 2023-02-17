@@ -396,6 +396,55 @@ const kitty = [
   },
 ];
 
+const cats = [
+  "Abyssinian",
+  "American Bobtail",
+  "American Curl",
+  "American Shorthair",
+  "American Wirehair",
+  "Balinese-Javanese",
+  "Bengal",
+  "Birman",
+  "Bombay",
+  "British Shorthair",
+  "Burmese",
+  "Chartreux",
+  "Cornish Rex",
+  "Devon Rex",
+  "Egyptian Mau",
+  "European Burmese",
+  "Exotic Shorthair",
+  "Havana Brown",
+  "Himalayan",
+  "Japanese Bobtail",
+  "Korat",
+  "LaPerm",
+  "Maine Coon",
+  "Manx",
+  "Munchkin",
+  "Norweigan Forest",
+  "Ocicat",
+  "Oriental",
+  "Persian",
+  "Peterbald",
+  "Pixiebob",
+  "Ragamuffin",
+  "Ragdoll",
+  "Russian Blue",
+  "Savannah",
+  "Scottish Fold",
+  "Selkirk Rex",
+  "Siamese",
+  "Siberian",
+  "Singapura",
+  "Somali",
+  "Sphynx",
+  "Tonkinese",
+  "Toyger",
+  "Turksih Angora",
+  "Turkish Van",
+];
+
 const DOMSelectors = {
   parent: document.getElementById("parent"),
   tab1: document.getElementById("tab1"),
@@ -405,10 +454,13 @@ const DOMSelectors = {
   form: document.getElementById("form"),
   calcB: document.getElementById("calculate"),
   CB: document.getElementById("CompBox"),
-  RB: document.getElementById("resultBox"),
+  // RB: document.querySelectorAll("resultBox"),
   byeimage: document.getElementById("byeimage"),
+  option: document.getElementById("option"),
 };
 
 export { kitty };
 
 export { DOMSelectors };
+
+export { cats };
