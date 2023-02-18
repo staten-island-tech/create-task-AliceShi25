@@ -31,28 +31,32 @@ function create() {
   card.name = DOMSelectors.name.value;
   card.cName = DOMSelectors.option.value;
   card.percentage = Math.floor(Math.random() * (100 - 1)) + 1;
-  DOMSelectors.calcB.insertAdjacentHTML(
-    `afterend`,
-    `<div id="resultBox">
-      <h2>${card.name} and ${card.cName} are ${card.percentage}% compatible</h2>
-       <button class="clear">Clear</button>
-  </div>`
+  DOMSelectors.results.insertAdjacentHTML(
+    "beforeend",
+    `<h2>${card.name} and ${card.cName} are ${card.percentage}% compatible</h2>`
   );
   if (card.percentage < 25) {
-    DOMSelectors.calcB.insertAdjacentHTML(`afterend`, `<h3>no compat ig</h3>`);
+    DOMSelectors.results.insertAdjacentHTML(
+      "beforeend",
+      `<h3>no compat ig</h3>`
+    );
   } else if (card.percentage >= 25 && card.percentage < 50) {
-    DOMSelectors.calcB.insertAdjacentHTML(
-      `afterend`,
+    DOMSelectors.results.insertAdjacentHTML(
+      "beforeend",
       `<h3>so so compat ig</h3>`
     );
   } else if (card.percentage >= 50 && card.percentage < 75) {
-    DOMSelectors.calcB.insertAdjacentHTML(
-      `afterend`,
+    DOMSelectors.results.insertAdjacentHTML(
+      "beforeend",
       `<h3>so so so compat ig</h3>`
     );
   } else {
-    DOMSelectors.calcB.insertAdjacentHTML(`afterend`, `<h3>compat yuh</h3>`);
+    DOMSelectors.results.insertAdjacentHTML("beforeend", `<h3>compat yuh</h3>`);
   }
+  DOMSelectors.results.insertAdjacentHTML(
+    "beforeend",
+    `<button id="remove">Clear</button>`
+  );
 }
 
 function none() {
@@ -61,16 +65,17 @@ function none() {
 }
 
 function clear() {
-  let clear = document.querySelectorAll(".clear");
-  clear.forEach((node) => {
-    node.addEventListener("click", function (addCard) {
-      addCard.target.parentElement.remove();
+  remove.addEventListener("click", function () {
+    DOMSelectors.removes.forEach((node) => {
+      node.textContent = ``;
     });
+    DOMSelectors.calcB.disabled = false;
   });
 }
 
 DOMSelectors.form.addEventListener("submit", function (addCard) {
   addCard.preventDefault();
+  DOMSelectors.calcB.disabled = true;
   create();
   none();
   clear();

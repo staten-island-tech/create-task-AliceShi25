@@ -447,15 +447,13 @@ const cats = [
 
 const DOMSelectors = {
   parent: document.getElementById("parent"),
-  tab1: document.getElementById("tab1"),
-  tab2: document.getElementById("tab2"),
   name: document.getElementById("Name"),
   cName: document.getElementById("cName"),
   form: document.getElementById("form"),
   calcB: document.getElementById("calculate"),
   CB: document.getElementById("CompBox"),
-  // RB: document.querySelectorAll("resultBox"),
-  byeimage: document.getElementById("byeimage"),
+  results: document.querySelector(".results"),
+  removes: document.querySelectorAll(".results"),
   option: document.getElementById("option"),
 };
 
