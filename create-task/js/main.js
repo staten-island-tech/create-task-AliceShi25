@@ -29,7 +29,7 @@ cats.forEach(function (item) {
 function create() {
   let card = {};
   card.name = DOMSelectors.name.value;
-  card.cName = DOMSelectors.option.value;
+  card.cName = DOMSelectors.cName.value;
   card.percentage = Math.floor(Math.random() * (100 - 1)) + 1;
   DOMSelectors.results.insertAdjacentHTML(
     "beforeend",
