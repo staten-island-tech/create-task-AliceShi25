@@ -6,12 +6,12 @@ const catInfo = {
     DOMSelectors.parent.insertAdjacentHTML(
       "beforeend",
       `<div class="imageCards">
-              <img class="image" src="${cat.image}">
+              <img class="image" src="${cat.image}" alt="${cat.name}">
               <h3 class="text">${cat.name}</h3>
               <div class="imageInfo">
-              <h5>lifespan:${cat.lifespan} </h5>
-              <h5> weight:${cat.weight}</h5>
-              <h5>Fun Fact: ${cat.funFact}</h5>
+              <h4>lifespan:${cat.lifespan} </h4>
+              <h4> weight:${cat.weight}</h4>
+              <h4>Fun Fact: ${cat.funFact}</h4>
               </div>
               </div>`
     );
@@ -44,27 +44,27 @@ function create() {
   card.percentage = Math.floor(Math.random() * (100 - 1)) + 1;
   DOMSelectors.results.insertAdjacentHTML(
     "beforeend",
-    `<h4>You and ${card.cName} are ${card.percentage}% compatible</h4>`
+    `<h3>You and ${card.cName} are ${card.percentage}% compatible</h4>`
   );
   if (card.percentage < 25) {
     DOMSelectors.results.insertAdjacentHTML(
       "beforeend",
-      `<h4>Not compatible at all. Try another cat?</h4>`
+      `<h3>Not compatible at all. Try another cat?</h3>`
     );
   } else if (card.percentage >= 25 && card.percentage < 50) {
     DOMSelectors.results.insertAdjacentHTML(
       "beforeend",
-      `<h4>Not very compatible. You can try your best.</h4>`
+      `<h3>Not very compatible. You can try your best.</h3>`
     );
   } else if (card.percentage >= 50 && card.percentage < 75) {
     DOMSelectors.results.insertAdjacentHTML(
       "beforeend",
-      `<h4>Somewhat compatible. Maybe this could be your cat.</h4>`
+      `<h3>Somewhat compatible. Maybe this could be your cat.</h3>`
     );
   } else {
     DOMSelectors.results.insertAdjacentHTML(
       "beforeend",
-      `<h4>Very compatible. The two of you are destined for each other. </h4>`
+      `<h3>Very compatible. The two of you are destined for each other. </h3>`
     );
   }
   DOMSelectors.results.insertAdjacentHTML(
