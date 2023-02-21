@@ -7,10 +7,10 @@ const catInfo = {
       "beforeend",
       `<div class="imageCards">
               <img class="image" src="${cat.image}">
-              <h2>${cat.name}</h2>
+              <h3 class="text">${cat.name}</h3>
               <div class="imageInfo">
-              <h3>lifespan:${cat.lifespan} </h3>
-              <h4> weight:${cat.weight}</h4>
+              <h5>lifespan:${cat.lifespan} </h5>
+              <h5> weight:${cat.weight}</h5>
               <h5>Fun Fact: ${cat.funFact}</h5>
               </div>
               </div>`
@@ -26,32 +26,46 @@ cats.forEach(function (item) {
   cName.appendChild(o);
 });
 
+// const e = document.getElementById("cName");
+// function onChange() {
+//   const text = e.options[e.selectedIndex].text;
+//   console.log(text);
+// }
+// e.onchange = onChange;
+// onChange();
+
+const Select = document.getElementById("cName");
+const text = Select.options[Select.selectedIndex].innerHTML;
+
 function create() {
   let card = {};
   card.name = DOMSelectors.name.value;
-  card.cName = DOMSelectors.cName.value;
+  card.cName = text;
   card.percentage = Math.floor(Math.random() * (100 - 1)) + 1;
   DOMSelectors.results.insertAdjacentHTML(
     "beforeend",
-    `<h2>${card.name} and ${card.cName} are ${card.percentage}% compatible</h2>`
+    `<h4>You and ${card.cName} are ${card.percentage}% compatible</h4>`
   );
   if (card.percentage < 25) {
     DOMSelectors.results.insertAdjacentHTML(
       "beforeend",
-      `<h3>no compat ig</h3>`
+      `<h4>Not compatible at all. Try another cat?</h4>`
     );
   } else if (card.percentage >= 25 && card.percentage < 50) {
     DOMSelectors.results.insertAdjacentHTML(
       "beforeend",
-      `<h3>so so compat ig</h3>`
+      `<h4>Not very compatible. You can try your best.</h4>`
     );
   } else if (card.percentage >= 50 && card.percentage < 75) {
     DOMSelectors.results.insertAdjacentHTML(
       "beforeend",
-      `<h3>so so so compat ig</h3>`
+      `<h4>Somewhat compatible. Maybe this could be your cat.</h4>`
     );
   } else {
-    DOMSelectors.results.insertAdjacentHTML("beforeend", `<h3>compat yuh</h3>`);
+    DOMSelectors.results.insertAdjacentHTML(
+      "beforeend",
+      `<h4>Very compatible. The two of you are destined for each other. </h4>`
+    );
   }
   DOMSelectors.results.insertAdjacentHTML(
     "beforeend",
@@ -61,7 +75,7 @@ function create() {
 
 function none() {
   DOMSelectors.name.value = "";
-  DOMSelectors.cName.value = "";
+  // DOMSelectors.cName.value = "";
 }
 
 function clear() {

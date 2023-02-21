@@ -268,131 +268,146 @@ const kitty = [
   },
   {
     name: "Pixiebob",
-    weight: "pounds",
-    lifespan: "years",
+    weight: "8-17 pounds",
+    lifespan: "15 years",
     image:
       "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/PixieBob_body_6.jpg?itok=uT78XE22",
-    funFact: "",
+    funFact:
+      "The Pixiebob is the only breed that accepts polydactyls – up to seven extra toes is allowed -- and comes in two coat varieties, longhair and shorthair.",
   },
   {
     name: "Ragamuffin",
-    weight: "pounds",
-    lifespan: "years",
+    weight: "8-20 pounds",
+    lifespan: "15-18 years",
     image:
       "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/RagaMuffin_body_7.jpg?itok=H0WRLvC3",
-    funFact: "",
+    funFact:
+      "The RagaMuffin is similar, but not identical, to the conformation and temperament of the Ragdoll due to years of separation between the breeds.",
   },
   {
     name: "Ragdoll",
-    weight: "pounds",
-    lifespan: "years",
+    weight: "10-15 pounds",
+    lifespan: "12-17 years",
     image:
       "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/Ragdoll_240x240%20%281%29.jpg?itok=Gkl4BB4i",
-    funFact: "",
+    funFact:
+      "These felines get their name from the way they collapse limply into the arms of anyone holding them.",
   },
   {
     name: "Russian Blue",
-    weight: "pounds",
-    lifespan: "years",
+    weight: "8-15 pounds",
+    lifespan: "10-15 years",
     image:
       "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/RussianBlue_body_7.jpg?itok=M22dbAGd",
-    funFact: "",
+    funFact:
+      "Some Russian Blue kittens are born with a hint of stripes, known as a “ghost stripes”. These stripes are a nod to the tabby gene all cats carry, though they usually fade with age.",
   },
   {
     name: "Savannah",
-    weight: "pounds",
-    lifespan: "years",
+    weight: "12-25 pounds",
+    lifespan: "12-20 years",
     image:
       "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/Savannah_body_7.jpg?itok=X0XiOA0y",
-    funFact: "",
+    funFact:
+      "Savannahs are excellent jumpers. They can jump up to 8 feet horizontally and climb easily.",
   },
   {
     name: "Scottish Fold",
-    weight: "pounds",
-    lifespan: "years",
+    weight: "6-13 pounds",
+    lifespan: "11-15 years",
     image:
       "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/SchottishFoldLH_body_7.jpg?itok=9D_VXtm9",
-    funFact: "",
+    funFact: "Only Folds with folded ears are permitted in show rings.",
   },
   {
     name: "Selkirk Rex",
-    weight: "pounds",
-    lifespan: "years",
+    weight: "6-16 pounds",
+    lifespan: "14-15 years",
     image:
       "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/SelkirkRex_body_7.jpg?itok=STbvVR6c",
-    funFact: "",
+    funFact:
+      "Selkirk Rex litters can have both curly coated and straight-haired kittens.",
   },
   {
     name: "Siamese",
-    weight: "pounds",
-    lifespan: "years",
+    weight: "8-15 pounds",
+    lifespan: "11-15 years",
     image:
       "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/Siamese_body_7.jpg?itok=WW-Xx-Fx",
-    funFact: "",
+    funFact:
+      "It was believed that when a member of the royal family in Siam died, the Siamese Cat received their soul. The cat was then moved to a temple, where she lived the rest of her life in luxury.",
   },
   {
     name: "Siberian",
-    weight: "pounds",
-    lifespan: "years",
+    weight: "8-17 pounds",
+    lifespan: "11-15 years",
     image:
       "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/Siberian_body_6.jpg?itok=h2_b_qR4",
-    funFact: "",
+    funFact:
+      "The Siberian Cat appears in Russian fairy tales, folktales and children’s books.",
   },
   {
     name: "Singapura",
-    weight: "pounds",
-    lifespan: "years",
+    weight: "5-8 pounds",
+    lifespan: "11-15 years",
     image:
       "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/Singapura_body_7.jpg?itok=3gAE8gtk",
-    funFact: "",
+    funFact:
+      "The Singapura originated from small brown cats with ticked coats known as “drain cats” because they lived in Singapore’s storm drains.",
   },
   {
     name: "Somali",
-    weight: "pounds",
-    lifespan: "years",
+    weight: "6-12 pounds",
+    lifespan: "9-13 years",
     image:
       "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/Somali_body_7.jpg?itok=K1p0KuJ4",
-    funFact: "",
+    funFact:
+      "Contrary to popular belief, the Somali did not originate in Somalia. Rather, the breed is essentially a longhaired Abyssinian that resulted from a recessive gene.",
   },
   {
     name: "Sphynx",
-    weight: "pounds",
-    lifespan: "years",
+    weight: "6-12 pounds",
+    lifespan: "8-15 years",
     image:
       "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/Sphynx_body_7.jpg?itok=7D82tscd",
-    funFact: "",
+    funFact:
+      "Because they are so friendly and cuddly, Sphynx are wonderful therapy pets.",
   },
   {
     name: "Tonkinese",
-    weight: "pounds",
-    lifespan: "years",
+    weight: "6-12 pounds",
+    lifespan: "15-18 years",
     image:
       "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/Tonkinese_body_7.jpg?itok=jM8CIygD",
-    funFact: "",
+    funFact:
+      "The Tonkinese, like her ancestral breeds, the Burmese and Siamese, becomes darker as she ages.",
   },
   {
     name: "Toyger",
-    weight: "pounds",
-    lifespan: "years",
+    weight: "7-15 pounds",
+    lifespan: "10-15 years",
     image:
       "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/Toyger_body_7.jpg?itok=v_9StF0z",
-    funFact: "",
+    funFact:
+      "Bred to resemble wild tigers in a domestic package, the Toyger has a unique coat pattern for a domestic cat.",
   },
   {
-    name: "Turksih Angora",
-    weight: "pounds",
-    lifespan: "years",
+    name: "Turkish Angora",
+    weight: "5-10 pounds",
+    lifespan: "12-18 years",
     image:
       "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/TurkishAngora_body_7.jpg?itok=Cx8X4qRH",
-    funFact: "",
+    funFact:
+      "Angoras actually enjoy playing in water. Some like splashing in the sink or hopping in the shower, while others have been known to willingly enter a body of water and paddle around.",
   },
   {
     name: "Turkish Van",
-    weight: "pounds",
-    lifespan: "years",
+    weight: "7-20 pounds",
+    lifespan: "12-17 years",
     image:
       "https://www.purina.com/sites/default/files/styles/kraken_generic_max_width_240/public/TurkishVan_body_7.jpg?itok=-JsVJtnt",
-    funFact: "",
+    funFact:
+      "The Turkish Van is a rare, ancient breed that developed in central and Southeast Asia.",
   },
 ];
 
