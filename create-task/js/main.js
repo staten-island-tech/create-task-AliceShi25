@@ -34,42 +34,47 @@ cats.forEach(function (item) {
 // e.onchange = onChange;
 // onChange();
 
-const Select = document.getElementById("cName");
-const text = Select.options[Select.selectedIndex].innerHTML;
+// const Select = document.getElementById("cName");
+// const text = Select.options[Select.selectedIndex].innerHTML;
+
+document.getElementById("calculate").onclick = function () {
+  const e = document.getElementById("cName");
+  const text = e.options[e.selectedIndex].text;
+  document.getElementById("container").innerHTML = "You selected " + text;
+};
 
 function create() {
   let card = {};
   card.name = DOMSelectors.name.value;
-  card.cName = text;
   card.percentage = Math.floor(Math.random() * (100 - 1)) + 1;
   DOMSelectors.results.insertAdjacentHTML(
     "beforeend",
-    `<h3>You and ${card.cName} are ${card.percentage}% compatible</h4>`
+    `<h3>Your compatibility with this cat breed is ${card.percentage}%</h4>`
   );
   if (card.percentage < 25) {
     DOMSelectors.results.insertAdjacentHTML(
       "beforeend",
-      `<h3>Not compatible at all. Try another cat?</h3>`
+      `<h3>You're not compatible at all. Try another cat?</h3>`
     );
   } else if (card.percentage >= 25 && card.percentage < 50) {
     DOMSelectors.results.insertAdjacentHTML(
       "beforeend",
-      `<h3>Not very compatible. You can try your best.</h3>`
+      `<h3>You're not very compatible. You can try your best.</h3>`
     );
   } else if (card.percentage >= 50 && card.percentage < 75) {
     DOMSelectors.results.insertAdjacentHTML(
       "beforeend",
-      `<h3>Somewhat compatible. Maybe this could be your cat.</h3>`
+      `<h3>You're somewhat compatible. Maybe this could be your cat.</h3>`
     );
   } else {
     DOMSelectors.results.insertAdjacentHTML(
       "beforeend",
-      `<h3>Very compatible. The two of you are destined for each other. </h3>`
+      `<h3>You're very compatible. The two of you are destined for each other. </h3>`
     );
   }
   DOMSelectors.results.insertAdjacentHTML(
     "beforeend",
-    `<button id="remove">Clear</button>`
+    `<button id="remove" onClick="window.location.reload();">Clear</button>`
   );
 }
 
