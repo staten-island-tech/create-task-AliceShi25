@@ -18,24 +18,12 @@ const catInfo = {
   },
 };
 kitty.forEach(catInfo.addInfo);
-cats.sort();
 cats.forEach(function (item) {
   let o = document.createElement("option");
   o.text = item;
   o.value = item;
   cName.appendChild(o);
 });
-
-// const e = document.getElementById("cName");
-// function onChange() {
-//   const text = e.options[e.selectedIndex].text;
-//   console.log(text);
-// }
-// e.onchange = onChange;
-// onChange();
-
-// const Select = document.getElementById("cName");
-// const text = Select.options[Select.selectedIndex].innerHTML;
 
 document.getElementById("calculate").onclick = function () {
   const e = document.getElementById("cName");
