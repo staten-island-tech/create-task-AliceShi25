@@ -33,7 +33,6 @@ document.getElementById("calculate").onclick = function () {
 
 function create() {
   let card = {};
-  card.name = DOMSelectors.name.value;
   card.percentage = Math.floor(Math.random() * (100 - 1)) + 1;
   DOMSelectors.results.insertAdjacentHTML(
     "beforeend",
