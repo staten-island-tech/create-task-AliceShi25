@@ -31,58 +31,58 @@ document.getElementById("calculate").onclick = function () {
   document.getElementById("container").innerHTML = "You selected " + text;
 };
 
-function create() {
-  let card = {};
-  card.name = DOMSelectors.name.value;
-  card.percentage = Math.floor(Math.random() * (100 - 1)) + 1;
-  DOMSelectors.results.insertAdjacentHTML(
-    "beforeend",
-    `<h3>Your compatibility with this cat breed is ${card.percentage}%</h4>`
-  );
-  if (card.percentage < 25) {
+const submit = {
+  create: function () {
+    let card = {};
+    card.percentage = Math.floor(Math.random() * (100 - 1)) + 1;
     DOMSelectors.results.insertAdjacentHTML(
       "beforeend",
-      `<h3>You're not compatible at all. Try another cat?</h3>`
+      `<h3>Your compatibility with this cat breed is ${card.percentage}%</h4>`
     );
-  } else if (card.percentage >= 25 && card.percentage < 50) {
+    if (card.percentage < 25) {
+      DOMSelectors.results.insertAdjacentHTML(
+        "beforeend",
+        `<h3>You're not compatible at all. Try another cat?</h3>`
+      );
+    } else if (card.percentage >= 25 && card.percentage < 50) {
+      DOMSelectors.results.insertAdjacentHTML(
+        "beforeend",
+        `<h3>You're not very compatible. You can try your best.</h3>`
+      );
+    } else if (card.percentage >= 50 && card.percentage < 75) {
+      DOMSelectors.results.insertAdjacentHTML(
+        "beforeend",
+        `<h3>You're somewhat compatible. Maybe this could be your cat.</h3>`
+      );
+    } else {
+      DOMSelectors.results.insertAdjacentHTML(
+        "beforeend",
+        `<h3>You're very compatible. The two of you are destined for each other. </h3>`
+      );
+    }
     DOMSelectors.results.insertAdjacentHTML(
       "beforeend",
-      `<h3>You're not very compatible. You can try your best.</h3>`
+      `<button id="remove" onClick="window.location.reload();">Clear</button>`
     );
-  } else if (card.percentage >= 50 && card.percentage < 75) {
-    DOMSelectors.results.insertAdjacentHTML(
-      "beforeend",
-      `<h3>You're somewhat compatible. Maybe this could be your cat.</h3>`
-    );
-  } else {
-    DOMSelectors.results.insertAdjacentHTML(
-      "beforeend",
-      `<h3>You're very compatible. The two of you are destined for each other. </h3>`
-    );
-  }
-  DOMSelectors.results.insertAdjacentHTML(
-    "beforeend",
-    `<button id="remove" onClick="window.location.reload();">Clear</button>`
-  );
-}
+  },
+  none: function () {
+    DOMSelectors.name.value = "";
+  },
 
-function none() {
-  DOMSelectors.name.value = "";
-}
-
-function clear() {
-  remove.addEventListener("click", function () {
-    DOMSelectors.removes.forEach((node) => {
-      node.textContent = ``;
+  clear: function () {
+    remove.addEventListener("click", function () {
+      DOMSelectors.removes.forEach((node) => {
+        node.textContent = ``;
+      });
+      DOMSelectors.calcB.disabled = false;
     });
-    DOMSelectors.calcB.disabled = false;
-  });
-}
+  },
+};
 
 DOMSelectors.form.addEventListener("submit", function (addCard) {
   addCard.preventDefault();
   DOMSelectors.calcB.disabled = true;
-  create();
-  none();
-  clear();
+  submit.create();
+  submit.none();
+  submit.clear();
 });
