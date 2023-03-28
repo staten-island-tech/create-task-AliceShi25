@@ -1,6 +1,5 @@
 import "../styles/style.css";
 import { DOMSelectors, kitty, cats } from "./array";
-
 const catInfo = {
   addInfo: function (cat) {
     DOMSelectors.parent.insertAdjacentHTML(
@@ -17,6 +16,7 @@ const catInfo = {
     );
   },
 };
+
 kitty.forEach(catInfo.addInfo);
 cats.forEach(function (item) {
   let o = document.createElement("option");
@@ -68,7 +68,6 @@ function create() {
 
 function none() {
   DOMSelectors.name.value = "";
-  // DOMSelectors.cName.value = "";
 }
 
 function clear() {
@@ -87,14 +86,3 @@ DOMSelectors.form.addEventListener("submit", function (addCard) {
   none();
   clear();
 });
-
-// const remove = {
-//   remove: function () {
-//     document.querySelectorAll(".imageCards").forEach((card) => card.remove());
-//   },
-// };
-
-// DOMSelectors.tab1.addEventListener("click", function () {
-//   remove.remove();
-//   catInfo.calcInfo();
-// });
